@@ -1,0 +1,51 @@
+{% extends 'home/main.html'%}
+{% block body %}
+<div class="container-fluid" style="padding-top: 100px;background-color: rgb(2,50,60);">
+    <div class="row">
+        <div  style="background-color:#1a6565;" class="col-3">
+            <div class="width:100%;height:100%;overflow:scroll;">
+                <div class="container-fluid">
+                    <form action='/places/filter' method='POST'> {% csrf_token %}
+                        <br/>
+                        <div class="row">
+                            <h5 style="color: white;">Filter</h5>
+                        </div>
+                        <div class="row">
+                            <div class="col-12">
+                                <h5 style="color: white;">filter by states</h5><hr/>
+                            </div>
+                            {% for i in states %}
+                            <div class="col-12">
+                                <input type="checkbox" name="{{i.1}}" value="{{i.1}}" style="color: white;"><span  style="color: white;">&nbsp;{{i.1}}</span></input>
+                            </div>
+                            {% endfor %}
+                            <br/>
+                        </div>
+                        <div class="row">
+                            <div class="col-12">
+                                <br/>
+                                <h5 style="color: white;">filter by categories</h5><hr/>
+                            </div>
+                            {% for i in categories %}
+                            <div class="col-12">
+                                <input type="checkbox" name="{{i}}" value="{{i.0}}"><span  style="color: white;">&nbsp;{{i.0}}</span></input>
+                            </div>
+                            {% endfor %}
+                        </div>
+                        <input type="submit" value="submit" class="custombtn" style="margin-right: auto;height:45px;width:90px;" style="background-color: cadetblue;">
+                    </form>
+                </div>
+            </div>
+        </div>
+        <div class="col-9">
+            {% block placeList %}
+            <h2>Place list</h2>
+            {% endblock %}
+        </div>
+    </div>
+    <div class="row">
+        
+        
+    </div>
+</div>
+{% endblock %}

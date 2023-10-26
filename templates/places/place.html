@@ -1,0 +1,50 @@
+{% extends "home/main.html" %}
+{% load static %}
+{% block body %}
+<div>
+    {% block topimage %}
+    <img src="{% static 'images/historical.jpg' %}" style="height: 100vh; width: 100%;object-fit: cover;" class="carousel-img"/>
+    {% endblock %}
+</div>
+<div style="position: absolute; top:40%;width:100%;font-size: 6vmax;font-weight: 900;color: white;z-index: 1;letter-spacing: 0.6ch;">
+    <P style="position: relative;font-size: 5vmax;">{{placename}}</P>
+</div>
+{% block button %}
+{% endblock %}
+<div style="width:100%;background-color: rgb(20,60,80);margin: 0;padding: 0;">
+    <div class="container" id="desc">
+        <div class="row">
+            <div class="col-12 col-md-6 content-col">
+                {% block placename %}
+                <h1 class="para">{{placename}}</h1>
+                {% endblock %}
+                <div style="width: 50%;">
+                <hr style="border-top:1px solid #00ccff;"/>
+                </div>
+                <hr style="border-top:1px solid #00ccff;"/>
+                {% block aboutplace %}
+                <p class="para">
+                   about  
+                </p>
+               {% endblock %}
+            </div>
+            <div class="col-12 col-md-6 content-col">
+                <img src="{% static 'images/map.png' %}" style="object-fit: contain; width: 100%;">
+            </div>
+        </div>
+        {% block imagecards %}
+        <div class="row">
+            <div class="col-12 col-md-4">
+                <img />
+            </div>
+            <div class="col-12 col-md-4">
+                <img />
+            </div>
+            <div class="col-12 col-md-4">
+                <img />
+            </div>  
+        </div>
+        {% endblock %}
+    </div>
+</div>
+{% endblock %}

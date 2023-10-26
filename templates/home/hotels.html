@@ -1,0 +1,68 @@
+{% extends 'home/main.html'%}
+{% block body %}
+{% load static %}
+<div class="container-fluid" style="padding-top: 100px;background-color: rgb(2,50,60);">
+    <div class="row">
+        <div class="col-10 offset-1">
+            <div class="card mb-3" style="width:100%;">
+                <div class="row no-gutters" style="height:350px;">
+                    <div class="col-md-4">
+                        <picture>
+                            <source media="(min-width:0px)" srcset={{place.imageurl}}>
+                        <img src="{% static 'images/questlogo.jpeg' %}" style="width: 100%;height:350px;object-fit: fill;" alt="...">
+                        </picture>
+                    </div>
+                    <div class="col-md-8">
+                        <div class="card-body">
+                        <h3 class="card-title ">{{place.name}}</h3>
+                        <hr/>
+                        <h5 style="text-align: left;">Location</h5>
+                        {% for j in address %}
+                        <p class="sansserif" style="text-align: left;">{{j}},</p>
+                        {% endfor %}
+                    
+                    </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <div class="row">
+        <div class="col-10 offset-1">
+            <div  style="background-color:white;padding: 4%;">
+                <h3 class="card-title ">Nearby Hotels</h3>
+                <hr/>
+                <div class="card-columns">
+                    {% for j in hotels %}
+                        <div class="card" style="background-color: #e6f3ff;">
+                            <div class="card-body">
+                                <h5 class="card-title">{{j.name}}</h5>
+                                <p class="card-text">{{j.address}}</p>
+                            </div>
+                        </div>
+                    {% endfor %}
+                </div>
+            </div>
+        </div>
+    </div>
+    <div class="row">
+        <div class="col-md-10 offset-1">
+            <div  style="background-color:white;padding: 5%;">
+                <h3 class="card-title ">Nearby Restaurants</h3>
+                <hr/>
+                <div class="card-columns">
+                {% for j in restaurants %}
+                    <div class="card" style="background-color: #e6f3ff;">
+                        <div class="card-body">
+                            <h5 class="card-title">{{j.name}}</h5>
+                            <p class="card-text">{{j.address}}</p>
+                        </div>
+                    </div>
+                {% endfor %}
+                </div>
+                
+            </div>
+        </div>
+    </div>
+</div>
+{% endblock %}

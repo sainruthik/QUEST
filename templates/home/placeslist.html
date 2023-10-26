@@ -1,0 +1,40 @@
+{% extends 'home/placeLayout.html'%}
+{% block placeList %}
+{% load static %}
+<div style="background-color: rgb(2,50,60);width:100%;min-height: 110vh;height:100%">
+
+    <div class="container">
+        {% for i in places %}
+        <div class="row" >
+            <div class="col-12">
+                <div class="card mb-3" style="width:100%;">
+                    <div class="row no-gutters" style="height:350px;">
+                        <div class="col-md-4">
+                            <picture>
+                                <source media="(min-width:0px)" srcset={{i.0.imageurl}}>
+                            <img src="{% static 'images/questlogo.jpeg' %}" style="width: 100%;height:350px;object-fit: fill;" alt="...">
+                            </picture>
+                        </div>
+                        <div class="col-md-8">
+                            <div class="card-body">
+                            <h3 class="card-title ">{{i.0.name}}</h3>
+                            <hr/>
+                            <h5 style="text-align: left;">Location</h5>
+                            {% for j in i.1 %}
+                            <p class="sansserif" style="text-align: left;margin:0;">{{j}},</p>
+                            {% endfor %}
+                            <br/>
+                            <a href="/place/{{i.0.name}}" class="btn btn-primary sansserif">Explore Hotels nearby</a>
+                            <a href="/place/{{i.0.name}}" class="btn btn-primary sansserif">Explore Restaurants nearby</a>
+                        </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        {% endfor %}
+        
+    </div>
+</div>
+
+{% endblock %}

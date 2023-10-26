@@ -1,0 +1,113 @@
+{% load static %} 
+<!doctype html>
+<html lang="en">
+  <head>
+    <!-- Required meta tags -->
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+
+    <!-- Bootstrap CSS -->
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css" integrity="sha384-JcKb8q3iqJ61gNV9KGb8thSsNjpSL0n8PARn9HuZOnIxN0hoP+VmmDGMN5t9UJ0Z" crossorigin="anonymous">
+    <!-- font -->
+    <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@500&display=swap" rel="stylesheet">
+    <!--jquery-->
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+    <!--google icons-->
+    <link rel="stylesheet" href="https://fonts.googleapis.com/icon?family=Material+Icons">
+    <!--font awesome icons-->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+
+    <!--loading static files-->
+    <link rel="stylesheet" type="text/css" href="{% static 'css/styles.css' %}">
+    <title>tourist</title>
+    <script>
+      function slideright(id) {
+          var container = document.getElementById(id);
+          sideScroll(container,'right',25,1000,500);
+      };
+      function slideleft(id) {
+          var container = document.getElementById(id);
+          sideScroll(container,'left',25,1000,500);
+      };
+
+      function sideScroll(element,direction,speed,distance,step){
+          scrollAmount = 0;
+          var slideTimer = setInterval(function(){
+              if(direction == 'left'){
+                  element.scrollLeft -= step;
+              } else {
+                  element.scrollLeft += step;
+              }
+              scrollAmount += step;
+              if(scrollAmount >= distance){
+                  window.clearInterval(slideTimer);
+              }
+          }, speed);
+      };
+      function here(){
+        alert('');
+      $('#loginmodal').modal('show');
+      };
+      $(document).ready(function(){
+        $(".bigtext").show();
+        $(".threecont").hide();
+        $("#postbtn").click(function(){
+          var timenow= new Date().toLocaleTimeString().toUpperCase();
+          var txt = `<div class="row p-3">
+        <div class="col-12 offset-md-2 col-md-9">
+            <div class="card">
+                <div class="card-header">
+                    <div class="container">
+                        <div class="row">
+                            <div class="col-2">
+                                <img  src="{% static 'images/historical.jpg' %}"  class="avatar">
+                            </div>
+                            <div class="col-8 conatiner">
+                                <div class="row">
+                                    <h3>George</h3>
+                                </div>
+                                <div class="row">
+                                    <p style="font-family: Arial, Helvetica, sans-serif;">Posted at `+ timenow+`&nbsp;</p>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="card-body">
+                    <p class="card-text">`
+    var txt2 = $("#usrmsg").html();
+    var txt3=`  </p>
+                </div>
+                </div>
+                </div>
+                </div>`;
+         // $("#usrmsg").prepend(txt);
+            
+          $("#blogcontainer").prepend(txt+txt2+txt3);
+          $("#usrmsg").html("");
+        });
+        $(".threecard").mouseenter(function(){
+          $(this).children(".bigtext").hide();
+          $(this).children(".threecont").show();
+
+        });
+        $(".threecard").mouseleave(function(){
+          $(".bigtext").show();
+          $(this).children(".threecont").hide();
+
+        });
+      });
+    </script>
+  </head>
+  <body>
+    {% include "home/header.html" %} 
+    {% block body %}
+    <h1>Tourist App</h1>
+    {% endblock %}
+    <!-- Optional JavaScript -->
+    <!-- jQuery first, then Popper.js, then Bootstrap JS -->
+    <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js" integrity="sha384-DfXdz2htPH0lsSSs5nCTpuj/zy4C+OGpamoFVy38MVBnE+IbbVYUew+OrCXaRkfj" crossorigin="anonymous"></script>
+    <script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.1/dist/umd/popper.min.js" integrity="sha384-9/reFTGAW83EW2RDu2S0VKaIzap3H66lZH81PoYlFhbGU+6BZp6G7niu735Sk7lN" crossorigin="anonymous"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js" integrity="sha384-B4gt1jrGC7Jh4AgTPSdUtOBvfO8shuf57BaghqFfPlYxofvL8/KUEfYiJOMMV+rV" crossorigin="anonymous"></script>
+  </body>
+</html>

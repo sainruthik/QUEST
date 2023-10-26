@@ -1,0 +1,121 @@
+{% extends "places/place.html" %}
+{% load static %}
+{% block placename %}
+    <h1 class="para">TEMPLES</h1>
+{% endblock %}
+{% block button  %}
+<button type="button" onclick="location.href='categories/temples'" style="position: absolute;top:70vmin;left:42vmax" class="custombtn" >Let's Explore</button>
+{% endblock %}
+{% block topimage %}
+    <img src="{% static 'images/historical.jpg' %}" style="height: 100vh; width: 100%;object-fit: cover;" class="carousel-img"/>
+{% endblock %}
+{% block aboutplace %}
+    <p class="para">
+        India is known for its temples – beautiful, serene places
+        of worship - significant religious and historic landmarks.
+        These ancient, intricately designed and faithfully
+        maintained places of worship are a must-visit for devotees 
+        and for all those who nurture an interest in history 
+        and architecture.
+    </p>
+{% endblock %}
+{% block imagecards %}
+    <div class="row row-block threecard" style="position: relative;">
+        <div style="min-height: 40vh;background-color: black;" class="col-12 bigtext">
+            <p style="font-size: 8vw;color: white;text-align: center;">AGRA</p>
+        </div>
+        <div class="col-12 row threecont">
+            <div class="col-12" class="cardtext" >
+                <p style="font-size: 5rem;color:white;">AGRA</p>
+            </div>
+            <div class="col-12 d-none d-md-block col-md-4 align-self-center">
+                <img src="{% static 'images/agra1.jpeg' %}" style="height: 50vh; width: 100%;object-fit: cover;" class="carousel-img"/>
+            </div>
+            <div class="col-12 col-md-4 align-self-center" style="position: relative;">
+                <img src="{% static 'images/agra2.jpeg' %}" style="height: 70vh; width: 100%;object-fit: cover;" class="carousel-img"/>
+                <div style="position: absolute; top: 0; z-index: 3;top: 50%;transform: translateY(-50%);">
+                    <p style="color: white; padding: 2% 5% 2% 0%;">Agra is a major tourist destination because of its many
+                        Mughal-era buildings,
+                        most notably the Taj Mahal, Agra Fort and Fatehpur Sikri,
+                        all of which are UNESCO World Heritage Sites.[8]
+                        Agra is included on the Golden Triangle tourist circuit, along
+                        with Delhi and Jaipur;
+                        and the Uttar Pradesh Heritage Arc, a tourist circuit of 
+                        Uttar Pradesh, along with Lucknow 
+                        and Varanasi. Agra is in the Braj cultural region.
+                    </p>
+                </div>
+            </div>
+            <div class="col-12 d-none d-md-block col-md-4 align-self-center">
+                <img src="{% static 'images/agra3.jpeg' %}" style="height: 50vh; width: 100%;object-fit: cover;" class="carousel-img"/>
+            </div>
+        </div>  
+        
+    </div>
+    <div class="row row-block threecard" style="position: relative;">
+        <div style="min-height: 40vh;background-color: black;" class="col-12 bigtext">
+            <p style="font-size: 8vw;color: white;text-align: center;">MYSORE</p>
+        </div>
+        <div class="col-12 row threecont">
+            <div class="col-12" class="cardtext" >
+                <p style="font-size: 5rem;color:white;">MYSORE</p>
+            </div>
+            <div class="col-12 d-none d-md-block col-md-4 align-self-center">
+                <img src="{% static 'images/mysore1.jpeg' %}" style="height: 50vh; width: 100%;object-fit: cover;" class="carousel-img"/>
+            </div>
+            <div class="col-12 col-md-4 align-self-center">
+                <img src="{% static 'images/mysore2.jpeg' %}" style="height: 70vh; width: 100%;object-fit: cover;" class="carousel-img"/>
+                <div style="position: absolute; top: 0; z-index: 3;top: 50%;transform: translateY(-50%);">
+                    <p style="color: white; padding: 2% 5% 2% 0%;">
+                        Mysore, locally known as Mysuru was the prominent city
+                        of Karnataka prior to Bangalore.
+                        This mystical and mythological city derives 
+                        its name from the buffalo headed
+                        demon Mahishasur who is known to have
+                        been slain atop the Chamundi Hills by 
+                        Goddess Chamundeshwari, an avatar of Parvati.
+                        The 10 day dussehra festival is organized every year
+                        to celebrate this victory of the good over the evil. The city can boast 
+                        of its rich past given to it generously by the dynasty of the Wodeyars,
+                        which has created such an
+                        appealing charm about the city that
+                        it can enthrall tourists even to this day.
+                    </p>
+                </div>
+            </div>
+            <div class="col-12 d-none d-md-block col-md-4 align-self-center">
+                <img src="{% static 'images/mysore3.jpeg' %}" style="height: 50vh; width: 100%;object-fit: cover;" class="carousel-img"/>
+            </div>  
+        </div>
+    </div>
+    <div class="row row-block threecard" style="position: relative;">
+        <div style="min-height: 40vh;background-color: black;" class="col-12 bigtext">
+            <p style="font-size: 8vw;color: white;text-align: center;">JAIPUR</p>
+        </div>
+        <div class="col-12 row threecont">
+            <div class="col-12" class="cardtext" >
+                <p style="font-size: 5rem;color:white;">JAIPUR</p>
+            </div>
+            <div class="col-12 d-none d-md-block col-md-4 align-self-center">
+                <img src="{% static 'images/temples.jpg' %}" style="height: 50vh; width: 100%;object-fit: cover;" class="carousel-img"/>
+            </div>
+            <div class="col-12 col-md-4 align-self-center">
+                <img src="{% static 'images/jaipur2.jpeg' %}" style="height: 70vh; width: 100%;object-fit: cover;" class="carousel-img"/>
+                <div style="position: absolute; top: 0; z-index: 3;top: 50%;transform: translateY(-50%);">
+                    <p style="color: white; padding: 2% 5% 2% 0%;">
+                        It’s hard to miss the pink in the ‘Pink City’, as Jaipur is 
+                        fondly called  Jaipur
+                        is a fine representation of the regal grandiose,
+                        that has always distinguished the state of Rajasthan. 
+                        Home to opulent palaces, towering forts and holy temples,
+                        not only has Jaipur gracefully retained its royal roots
+                        but it proudly displays them for visitors to see and experience
+                    </p>
+                </div>
+            </div>
+            <div class="col-12 d-none d-md-block col-md-4 align-self-center">
+                <img src="{% static 'images/jaipur3.jpeg' %}" style="height: 50vh; width: 100%;object-fit: cover;" class="carousel-img"/>
+            </div>
+        </div>  
+    </div>
+{% endblock %}

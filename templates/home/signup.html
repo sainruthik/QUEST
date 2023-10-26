@@ -1,0 +1,29 @@
+{% extends "home/landingpage.html" %}
+{% block otp %}
+{% load static %}
+{% if alert %}
+<script>
+    alert("wrong otp please enter coorect otp");
+</script>
+{% endif %}
+<div style="position:absolute;top:50%;left:50%;z-index: 3;background-color: white;transform: translate(-50%,-50%);border-radius: 8px;">
+      <div class="logo">
+        <img src="{% static 'images/questlogo.jpeg' %}" width="50%" object-fit="contain" class="logoimage"/>
+      </div>
+      <div style="padding: 5% 10% 5% 10%;">
+          <form action="/login/signup" method="post"> {% csrf_token %}        
+              <div class="form-group" style="padding:4% 10% 4% 10%">
+                <label for="exampleInputEmail1" style="padding:4%">Set Username</label>
+                <input  name="username" class="custom-input" >
+              </div>
+              <div class="form-group" style="padding:4% 10% 4% 10%">
+                <label for="exampleInputEmail1" style="padding:4%">Set password</label>
+                <input  name="password" class="custom-input" >
+              </div>
+              <div style="display: flex;flex-direction: column;justify-content: center;padding-top:5%">
+                <input type="submit" value="confirm and signup" class="custombtn" style="margin-left: auto;margin-right: auto;"></input>
+              </div>
+          </form>
+      </div>
+</div>
+{% endblock %}

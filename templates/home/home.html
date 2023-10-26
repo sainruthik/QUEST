@@ -1,0 +1,153 @@
+{% extends "home/main.html" %}
+{% block body %}
+{% load static %}
+<div style="background-color: rgb(2,50,60);width:100%;padding-top: 100px;">
+    <div class="container-fluid">
+        <div class="row container-fluid">
+            <div id="carouselExampleFade" class="carousel slide carousel-fade" data-ride="carousel" data-pause="false" data-interval="2500" style="height: 50vh;width: 100%;">
+                <div class="carousel-inner" style="height: 50vh;width:100%;">
+                  <div class="carousel-item " style="height: 50vh; width: 100%;position: relative;">
+                    <img src="https://images.unsplash.com/photo-1483450388369-9ed95738483c?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=1000&q=60" style="height: 100%; width: 100%;object-fit: cover;filter: brightness(40%);" class="carousel-img">
+                    <div style="position: absolute;top: 20%;left:5%;transform:translate(0%,-5%);z-index: 2;">
+                        <div style="padding-right: 150px;"><h1 style="color: #dbffff;">Flight shedules across india</h1><br/><br/>
+                            <h6 style="color:#b2b2b2;">
+                                Check domestic flights shedule for all indian airlines in india and Get latest timetable with respect to their flight codes and domestic airport information.
+                                Get latest location, details of the airport across all parts of the india.
+                            </h6><br/>
+                            <h6 style="color:#b2b2b2;">
+                                Check seat availability, fare , time of departure, time of arrival etc for all trains in india.
+                            </h6><br/>
+                            <button class="custombtn" style="font-size: small;max-width: 100px;max-height: 30px;margin-left: 0;">explore</button>
+                        </div>
+                    </div>
+                  </div>
+                  <div class="carousel-item " style="height: 50vh;width: 100%;">
+                    <img src="https://images.unsplash.com/photo-1542092444-5a371217797d?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=1000&q=60" style="height: 100%; width: 100%;object-fit: cover;filter: brightness(40%);" class="carousel-img">
+                    <div style="position: absolute;top: 20%;left:5%;transform:translate(0%,-5%);z-index: 2;">
+                        <div style="padding-right: 150px;"><h1 style="color: #dbffff;">Train shedules across india</h1><br/><br/>
+                            <h6 style="color:#b2b2b2;">
+                                Check domestic Trains shedule in india and Get latest timetable with respect to their station codes and domestic station information.
+                                Get latest location, details of the trains across all parts of the india.
+                            </h6><br/>
+                            <h6 style="color:#b2b2b2;">
+                                Check seat availability, fare , time of departure, time of arrival etc for all trains in india.
+                            </h6><br/>
+                            <button class="custombtn" style="font-size: small;max-width: 100px;max-height: 30px;margin-left: 0;">explore</button>
+                        </div>
+                    </div>  
+                   </div>
+                   <div class="carousel-item " style="height: 50vh;width: 100%;">
+                    <img src="https://images.unsplash.com/photo-1602013414997-f8f7f52d1d50?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=1000&q=60" style="height: 100%; width: 100%;object-fit: cover;filter: brightness(40%);" class="carousel-img">
+                    <div style="position: absolute;top: 20%;left:5%;transform:translate(0%,-5%);z-index: 2;">
+                        <div style="padding-right: 150px;"><h1 style="color: #dbffff;">Get the details of the hotels near the tourist places you visit</h1><br/><br/>
+                            <h6 style="color:#b2b2b2;">
+                                Get latest location, details of the Hotels near the places you want to visit
+                            </h6><br/>
+                            <h6 style="color:#b2b2b2;">
+                                Check ratings, reviews , fare of the hotels.
+                            </h6><br/>
+                            <button class="custombtn" style="font-size: small;max-width: 100px;max-height: 30px;margin-left: 0;">explore</button>
+                        </div>
+                    </div>  
+                   </div>
+                   <div class="carousel-item " style="height: 50vh;width: 100%;">
+                    <img src="https://images.unsplash.com/photo-1536305030588-45dc07a2a372?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=1000&q=60" style="height: 100%; width: 100%;object-fit: cover;filter: brightness(40%);" class="carousel-img">
+                    <div style="position: absolute;top: 20%;left:5%;transform:translate(0%,-5%);z-index: 2;">
+                        <div style="padding-right: 150px;"><h1 style="color: #dbffff;">Check the Restaurants near the tourist places you visit</h1><br/><br/>
+                            <h6 style="color:#b2b2b2;">
+                                Get the location of the restaurants near the places you visit
+                            </h6><br/>
+                            <h6 style="color:#b2b2b2;">
+                                Check the type of dishes available in the restaurant
+                            </h6><br/>
+                            <h6 style="color:#b2b2b2;">
+                                Get rating, reviews of the food
+                            </h6><br/>
+                            <button class="custombtn" style="font-size: small;max-width: 100px;max-height: 30px;margin-left: 0;">explore</button>
+                        </div>
+                    </div>  
+                   </div>
+                   <div class="carousel-item active" style="height: 50vh;width: 100%;">
+                    <img src="https://images.unsplash.com/photo-1579987037273-da6e7a1d7e14?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=1000&q=80" style="height: 100%; width: 100%;object-fit: cover;filter: brightness(40%);" class="carousel-img">
+                    <div style="position: absolute;top: 20%;left:5%;transform:translate(0%,-5%);z-index: 2;">
+                        <div style="padding-right: 150px;"><h1 style="color: #dbffff;">Explore india</h1><br/><br/>
+                            <h6 style="color:#b2b2b2;">
+                                Get the location of the restaurants near the places you visit
+                            </h6><br/>
+                            <h6 style="color:#b2b2b2;">
+                                Check the type of dishes available in the restaurant
+                            </h6><br/>
+                            <h6 style="color:#b2b2b2;">
+                                Get rating, reviews of the food
+                            </h6><br/>
+                            <button class="custombtn" style="font-size: small;max-width: 100px;max-height: 30px;margin-left: 0;">explore</button>
+                        </div>
+                    </div>  
+                   </div>
+                </div>
+                
+            </div>
+        </div>
+        <div class="row" style="position: relative;">
+            <div class="col-12">
+                <h4 style="color: blanchedalmond;">Explore by states</h4>
+            </div>
+            <div class="scoll-pane mt-4" id="explorebystates" style="overflow: auto;white-space: nowrap;">
+                <div class="container" style="display: inline-block;">
+                        {% for i in states %}
+                        <div  style="display: inline-block;width:34%;padding: 4px;border:0.1px solid #b3dbff;margin:4px">
+                            <div style="position: relative;">
+                                <a href="/states/{{i.0}}">
+                                <img src={{i.2}} style="filter: brightness(65%);width:100%;object-fit: cover;height: 400px;" class="card-img-top" alt="..."   loading="lazy"/>
+                                <div style="position: absolute;top:50%;left:50%;transform: translate(-50%,-50%);">
+                                    <p><h2 style="color: white;">{{i.1}}</h2></p>
+                                </div>
+                                </a>
+                            </div>
+                        </div>
+                        {% endfor %}
+                </div>
+                <div style="position: absolute;top:50%;left: 1%;">
+                    <button id="slideBack" type="button" onclick="slideleft('explorebystates');"><i class="fa fa-caret-left"></i>Prev</button>
+                </div>
+                <div style="position: absolute;top:50%;left:96%;">
+                    <button id="slide" type="button" onclick="slideright('explorebystates');">Next<i class="fa fa-caret-right"></i></button>
+                </div>
+            </div>
+        </div>
+        <div class="row" style="position: relative;">
+            <div class="col-12">
+                <h4 style="color: blanchedalmond;">Explore by Categories</h4>
+            </div>
+            <div class="scoll-pane mt-4" id="recommendedplaces" style="overflow: auto;white-space: nowrap;">
+                
+                <div class="container" style="display: inline-block;">
+                        {% for i in categories %}
+                        <div style="display: inline-block;width:34%;padding: 4px;border:0.1px solid #b3dbff;margin:4px;">
+                            <div class="card" style="height: 100%;">
+                                <a href="/{{i.1}}">
+                                <img src="{% get_static_prefix %}images/{{ i.1 }}.jpg" style="height: 250px;width: 100%;">
+                                <div class="card-footer">
+                                    <small class="text-muted">{{i.0}}</small>
+                                </div>
+                                </a>
+                            </div>
+                        </div>
+                        {% endfor %}
+                </div>
+                
+            </div>
+            
+                <div style="position: absolute;top:50%;left: 1%;">
+                    <button id="slideBack" type="button" onclick="slideleft('recommendedplaces');"><i class="fa fa-caret-left"></i>Prev</button>
+                </div>
+                <div style="position: absolute;top:50%;left:96%;">
+                    <button id="slide" type="button" onclick="slideright('recommendedplaces');">Next<i class="fa fa-caret-right"></i></button>
+                </div>
+        </div>
+
+        
+        
+    </div>
+</div>
+{% endblock %}

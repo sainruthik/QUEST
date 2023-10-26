@@ -1,0 +1,69 @@
+{% load static %}
+{% if message %}
+    <script>
+      alert('{{message}}');
+    </script>
+{% endif %}
+<nav class="navbar navbar-expand-lg" style="position: fixed;top:0;z-index: 10;width: 100%;background-color:rgb(80,178,196);">
+    <div style="width: 10vw;">
+        <a class="navbar-brand" href="#" >
+            <img src="{% static 'images/logotrans.png' %}"  object-fit="contain" alt="quest" style="width:10vw;">
+        </a>
+    </div>
+    <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+      <span class="navbar-toggler-icon"></span>
+    </button>
+    
+    <div class="collapse navbar-collapse" id="navbarSupportedContent">
+      <ul class="navbar-nav mr-auto ml-auto">
+      {% if username %}
+        <li class="nav-item active">
+          <a class="nav-link header-link" href="/home">Home</a>
+        </li>
+      
+        <li class="nav-item">
+          <a class="nav-link header-link" href="/aboutus">About us</a>
+        </li>
+        <li class="nav-item">
+            <a class="nav-link header-link" href="/blog">Blog</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link header-link" href="/train">search trains</a>
+          </li>
+        <li class="nav-item dropdown">
+          <a class="nav-link  header-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+            Places
+          </a>
+          <div class="dropdown-menu" aria-labelledby="navbarDropdown">
+            <a class="dropdown-item" href="/historical">Historical places</a>
+            <a class="dropdown-item" href="/parks">National Parks</a>
+            <a class="dropdown-item" href="/temples">Temples</a>
+            <a class="dropdown-item" href="/cities">Major cities</a>
+            <a class="dropdown-item" href="/beaches">Beaches</a>
+            <a class="dropdown-item" href="/hills">Hill stations</a>
+          </div>
+        </li>
+     
+      </ul>
+      <form class="form-inline my-2 my-lg-0" method="POST" action="/" id="searchbar">{% csrf_token %}    
+        <input class="form-control mr-sm-2 search-bar" type="search" placeholder="Search" aria-label="Search" name="search">
+        <button class="btn primary my-2 my-sm-0  header-link" type="submit" form="searchbar">Search</button>
+      </form>
+      
+      <div style="margin-left:20px;">
+        <div class="nav-item dropdown dropleft" style="margin: 0;padding:0;">
+          <a class="nav-link  header-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false" style="margin: 0;padding:0;">
+            <img src="https://image.flaticon.com/icons/png/512/0/93.png" alt="Avatar" class="avatar-small">
+          </a>
+          <div class="dropdown-menu" aria-labelledby="navbarDropdown">
+            <a class="dropdown-item" href="/historical">Welcome {{username}}</a>
+            <a class="dropdown-item" href="/historical">Profile</a>
+            <a class="dropdown-item" href="/parks">Favourite places</a>
+            <a class="dropdown-item" href="/temples">Messages</a>
+            <a class="dropdown-item" href="/login/logout">Log out</a>
+          </div>
+        </div>
+      </div>
+      {% endif %}
+    </div>
+  </nav>

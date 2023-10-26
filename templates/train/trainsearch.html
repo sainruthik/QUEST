@@ -1,0 +1,73 @@
+{% extends "home/main.html" %}
+{% block body %}
+{% load static %}
+<div style="background-color: rgb(2,50,60);width:100%;padding-top: 100px;min-height: 100vh;">
+    <div class="container-fluid">
+        <div class="row container-fluid" style="padding: 0;margin: 0;">
+            <div style="height: 70vh;width: 100%;">
+                <img src="https://images.unsplash.com/photo-1542092444-5a371217797d?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=1000&q=60" style="height: 100%; width: 100%;object-fit: cover;filter: brightness(40%);"/>
+            </div>
+        </div>
+        <div style="position:absolute;top:50%;left:50%;transform: translate(-50%,-50%);">
+            <h1 style="color: white;margin-left: auto;margin-right: auto;text-align: center;margin-bottom: 80px;">Search train availability in Stations</h1>
+            <form action="/train/" method='POST'> {% csrf_token %}
+                <select class="custom-input"  style="width:20vw;height:3vw;display: block;margin-left: auto;margin-right: auto; margin-bottom: 40px;" placeholder="destination" name="destination">
+                    {% for i in station %}
+                    <option value="{{i}}" class="sansserif">{{i}}</option>
+                    {% endfor %}
+                </select>      
+                <input type="submit" value="Search" class="custombtn" style="margin-left: auto;margin-right: auto;"></input>
+            </form>
+        </div>
+        <div class="row">
+            {% for i in trains %}
+              <div class="card w-100">
+                <div class="card-body">
+                    <div class="container">
+                        <div class="row">
+                            <div class="col-6">
+                                <h5 class="card-title sansserif">{{i.1.no}}</h5>
+                                <h4 class="card-text sansserif" style="color: black;">{{i.1.name}}</h4>
+                                <p style="text-align: left;color: brown;" class="sansserif"><span style="color:blue" >SOURCE :&nbsp;</span>{{i.1.source}}&nbsp;&nbsp;</p>
+                                <p style="text-align: left;color: brown;" class="sansserif"><span style="color:blue"> DESTINATION : &nbsp;</span>{{i.1.destination}}</p>
+                                <a href="#" class="btn btn-primary sansserif">ARRIVAL:{{i.1.arrival}}</a>
+                                <a href="#" class="btn btn-primary sansserif">DEPARTURE:{{i.1.departure}}</a>
+                            </div>
+                            <div class="col-6">
+                                <table class="table">
+                                    <thead>
+                                      <tr>
+                                        <th scope="col">Mon</th>
+                                        <th scope="col">Tue</th>
+                                        <th scope="col">Wed</th>
+                                        <th scope="col">Thu</th>
+                                        <th scope="col">Fri</th>
+                                        <th scope="col">Sat</th>
+                                        <th scope="col">Sun</th>
+                                      </tr>
+                                    </thead>
+                                    <tbody>
+                                      <tr>
+                                        <td>
+                                            {{i.1.days.0}}</td>
+                                        <td>{{i.1.days.1}}</td>
+                                        <td>{{i.1.days.2}}</td>
+                                        <td>{{i.1.days.3}}</td>
+                                        <td>{{i.1.days.4}}</td>
+                                        <td>{{i.1.days.5}}</td>
+                                        <td>{{i.1.days.6}}</td>
+                                      </tr>
+                                    </tbody>
+                                </table>
+                            </div>
+                        </div>
+                    </div>
+                  
+                </div>
+              </div>
+            {% endfor %}
+        </div>
+    </div>
+</div>
+
+{% endblock %}

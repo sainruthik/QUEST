@@ -1,0 +1,50 @@
+{% load static %}
+<div class="modal fade" id="loginmodal" tabindex="-1" role="dialog" aria-labelledby="loginmodalLabel" aria-hidden="true" data-show='true'>
+    <div class="modal-dialog modal-dialog-centered" role="document">
+      <div class="modal-content custom-modal">
+        <div class="modal-body">
+          <nav>
+            <div class="nav nav-tabs nav-fill" id="nav-tab" role="tablist">
+              <a class="nav-item nav-link active login-nav" id="nav-login-tab" data-toggle="tab" href="#nav-login" role="tab" aria-controls="nav-home" aria-selected="true">Log In</a>
+              <a class="nav-item nav-link" id="nav-signup-tab" data-toggle="tab" href="#nav-signup" role="tab" aria-controls="nav-profile" aria-selected="false">Sign up</a>
+            </div>
+          </nav>
+          <div class="tab-content" id="nav-tabContent">
+            <div class="logo">
+              <img src="{% static 'images/questlogo.jpeg' %}" width="50%" object-fit="contain" class="logoimage"/>
+            </div>
+            <div class="tab-pane fade show active" id="nav-login" role="tabpanel" aria-labelledby="nav-home-tab">
+                <form  action="/login/login" method="post">       {% csrf_token %}           >
+                    <div class="form-group">
+                      <label for="exampleInputEmail1">Username</label>
+                      <input  name="username" class="custom-input" title="Enter a valid username" placeholder="Enter username" required>
+                    </div>
+                    <div class="form-group">
+                      <label for="exampleInputPassword1">Password</label>
+                      <input type="password" class="custom-input" name="password" placeholder="Password" required>
+                    </div>
+                    <div style="display: flex;flex-direction: column;justify-content: center;">
+                      <input type="submit" value="log in" class="custombtn" style="margin-left: auto;margin-right: auto;"></input>
+                      <a type="button" class="exit" data-dismiss="modal" style="margin-left: auto;margin-right: auto;">Close</a>
+                    </div>
+                </form>
+            </div>
+           
+
+            <div class="tab-pane fade" id="nav-signup" role="tabpanel" aria-labelledby="nav-profile-tab">
+                <form action="/login/sendOTP" method="post">{% csrf_token %}    
+                    <div class="form-group">
+                      <label for="exampleInputEmail1">Email address</label>
+                      <input type="email" class="custom-input" name="email" title="enter a valid email address" placeholder="enter your email" required>
+                    </div>
+                    <div style="display: flex;flex-direction: column;justify-content: center;">
+                      <input type="submit" value="sign up" class="custombtn" style="margin-left: auto;margin-right: auto;"></input>
+                      <a type="button" class="exit" data-dismiss="modal" style="margin-left: auto;margin-right: auto;">Close</a>
+                    </div>
+                </form>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+</div>
