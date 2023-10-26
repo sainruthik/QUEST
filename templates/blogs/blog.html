@@ -1,0 +1,63 @@
+{% extends "home/main.html" %}
+{% block body %}
+{% load static %}
+<div style="width: 100%;background-color: black;padding-top: 60px;">
+<h1>Blog</h1>
+<div class="container" id="blogcontainer" style="background-color: #f0f8ff;">
+    {% for i in li %}
+    <div class="row p-3">
+        <div class="col-12 offset-md-2 col-md-9">
+            <div class="card">
+                <div class="card-header">
+                    <div class="container">
+                        <div class="row">
+                            <div class="col-2">
+                                <img  src="{% static 'images/historical.jpg' %}"  class="avatar">
+                            </div>
+                            <div class="col-8 conatiner">
+                                <div class="row">
+                                    <h3>George</h3>
+                                </div>
+                                <div class="row">
+                                    <p>Posted 3hrs ago</p>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="card-body">
+                    <p class="card-text">
+                        A childhood spent in the Aravallis, travelling stints with parents during school, a hiking club 
+                        well used at College, a gradually developing spiritual quest and an innate love for nature. 
+                        These are perhaps the reasons why a visit to the hills is always a priority among travel options. Every now and then, 
+                        sucked into the mundane humdrum urban existence, there seems to be a divine call that says, “pack your bags and hit the Himalayas”.
+                        One such call took my spouse Swati and I to “Nye-mae-el”, meaning Paradise. This is what the Lepcha or original 
+                        inhabitants, called the beautiful land of Sikkim. We boarded a flight from Delhi to Bagdogra and then undertook a five 
+                        hour road journey to Gangtok, where we reached around 7 pm.
+                        After check-in at a pre-booked modest hotel, we proceeded to PUB 25 to celebrate our arrival. 
+                        The backdrop of Clapton, Dire Straits and blues numbers made for a
+                         memorable evening in one of the best pub experiences I have known.
+                    </p>
+                </div>
+            </div>
+        </div>
+    </div>
+    {% endfor %}
+    <div class="row" style="padding:500px;">
+    </div>
+    <div class="row" style="position: fixed;bottom: 0;padding: 0;margin:0;background-color: #e6f3ff;width:100%;border:0.1px solid #99ceff;">
+        <div class="col-1">
+            <img  src="{% static 'images/historical.jpg' %}"  class="avatar">
+        </div>
+        <div class="col-7">
+            <p><span class="textarea" role="textbox" id="usrmsg" contenteditable></span></p>
+        </div>
+        <div class="col-2 align-self-center">
+            <button class="post-button" id="postbtn">POST</button>
+        </div>
+    </div>
+</div>
+
+</div>
+
+{% endblock %}

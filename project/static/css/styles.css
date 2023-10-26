@@ -1,0 +1,172 @@
+body {
+    font-family: 'Playfair Display', serif;
+}
+.sansserif {
+    font-family: Arial, Helvetica, sans-serif;
+  }
+.scoll-pane {
+    width: 100%;
+    height: auto;
+    overflow: auto;
+    outline: none;
+    overflow-y: hidden;
+    padding-bottom: 15px;
+    -ms-overflow-style: scroll;  
+    scrollbar-width: none;  
+}
+.scoll-pane::-webkit-scrollbar { 
+    display: none;  
+    }
+
+button {
+    outline: none;
+    border: 0;
+}
+button:active {
+    outline: none;
+    border:0;
+}
+button:hover {
+    outline: none;
+    border: 0;
+}
+.custombtn {
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+    width:12vmax;
+    height:4vmax;
+    z-index: 5;
+    font-size: 1.2vmax;
+    background-color: #00ccff;
+    color:white;
+    border: 0;
+    border-radius: 5vmax;
+    outline: none;
+}
+.custombtn:hover{
+    background-color: transparent;
+    color:#00ccff;
+    border:2px solid #00ccff;
+}
+p{
+    text-align: center;
+}
+.custom-modal {
+    border:0;
+    border-radius: 0 0 10% 10%;
+}
+.custom-input {
+    width:90%;
+    display: block;
+    border-radius: 16px;
+    border-color: grey;
+    margin-left: auto;
+    margin-right: auto;
+    outline: none;
+}
+label {
+    display: block;
+    text-align: center;
+    margin-left: auto;
+    margin-right: auto;
+}
+.exit {
+    background-color: white;
+}
+.logoimage {
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+}
+.carousel-img {
+    filter: brightness(70%);
+}
+.header-link {
+    color:white;
+}
+.header-link:hover {
+    color:#00ccff;
+}
+.search-bar {
+    border-radius: 20px;
+}
+.login-link {
+    color:black;
+    border:2px solid  black;
+}
+.active-nav {
+background-color: blue;
+}
+.primary {
+    background-color: #00ccff;
+    color:#fff;
+}
+.primary:hover {
+    background-color: transparent;
+    color:#00ccff;
+    border:2px solid #00ccff;
+}
+.secondary {
+    color:gray;
+}
+
+.content-col {
+    padding:5%;
+}
+.para {
+    text-align: left;
+    color:white;
+    padding-top:5%;
+    padding-bottom: 5%;
+    margin-top: auto;
+    margin-bottom: auto;
+}
+.map {
+    
+    background-repeat:no-repeat;
+    background-size:100%;
+        
+}
+.cardtext {
+    background-color: gray;
+}
+.cardtext:hover {
+    display: none;
+}
+.row-block {
+    padding:5% 1% 5% 1%;
+}
+.comment-box{
+    height:400px;
+    width:70vw;
+}
+.textarea {
+    display: block;
+    width: 100%;
+    overflow: hidden;
+    resize: both;
+    min-height: 60px;
+    line-height: 20px;
+    border:2px solid black;
+  }
+  .textarea[contenteditable]:empty::before {
+    content: "Write your thoughts....";
+    color: gray;
+  }
+  .post-button {
+      background-color: #00ccff;
+      border-radius: 5%;
+      color:white;
+      padding:1% 2% 1% 2%;
+  }
+  .avatar-small {
+    vertical-align: middle;
+    width: 50px;
+    height: 50px;
+    border-radius: 50%;
+    border:1px solid grey;
+  }
+  .card-text {
+      text-align: left;
+  }
